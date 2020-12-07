@@ -18,7 +18,6 @@ export default function ImageItem({imageItem}) {
     return (
         <div className="col-md-6">
             <img 
-            onClick={handleOnClick}
             className="img-fluid" 
             src={imageItem.imageURL} 
             alt={imageItem.description}
@@ -27,8 +26,8 @@ export default function ImageItem({imageItem}) {
            <p>
                {imageItem.description}
            </p>
-           <p>
-               Likes: {likes}
+           <p onClick={handleOnClick}>
+               ❤ {likes}
            </p>
         </div>
     )
