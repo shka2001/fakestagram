@@ -2,9 +2,16 @@ import React, { useState } from 'react'
 
 export default function ImageItem({imageItem}) {
     const [newCounter, setNewCounter] = useState(0)
+    //const stateVariable = use State[0] => [stateVariable, setVariable]
+    //const newCounter = stateVariable[0]
+    //const setNewCounter = stateVariable[1]
+
+    /*setNewCounter(5)
+      Sätter variablen till inparameter (5)
+      Anropar den komponenten renderingsfunktion
+    */
 
     function handleOnClick() {
-        
         setNewCounter(newCounter + 1)
     }
 
