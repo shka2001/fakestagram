@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageItem from '../components/ImageItem'
 import { imageList } from "../imageList"
 
 export default function ImageListPage() {
@@ -6,9 +7,14 @@ export default function ImageListPage() {
     return (
         <>
             <h2>Instagram</h2>
-            {imageList.map ((imageItem, index) => {
-                return <p key={imageItem.id}>{imageItem.title}</p>
-            } )}
+            <div className="row">
+                {imageList.map( imageItem => {
+                return  <ImageItem
+                key={imageItem.id}
+                imageItem={imageItem}
+                />
+                } )}
+            </div>
         </>
     )
 }
