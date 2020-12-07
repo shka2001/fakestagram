@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Comments from './Comments'
 
 export default function ImageItem({imageItem}) {
     const [likes, setLikes] = useState(imageItem.likes)
@@ -26,9 +27,10 @@ export default function ImageItem({imageItem}) {
            <p>
                {imageItem.description}
            </p>
-           <p onClick={handleOnClick}>
+           <div onClick={handleOnClick}>
                ❤ {likes}
-           </p>
+           </div>
+           <Comments />
         </div>
     )
 }
