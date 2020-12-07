@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import NavLinkItem from "./components/NavLinkItem";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
@@ -15,16 +16,10 @@ function App() {
 
       <div className="row">
         <div className="col-md-12">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+          <ul className="nav">
+            <NavLinkItem to="/" text="Home" />
+            <NavLinkItem to="/about" text="About" />
+            <NavLinkItem to="/contact" text="Contact" />
           </ul>
         </div>
       </div>
