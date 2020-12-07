@@ -4,6 +4,7 @@ import NavLinkItem from "./components/NavLinkItem";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
+import ImageListPage from "./pages/ImageListPage";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       </div>
 
       <Switch>
+        <Route path="/instagram">
+          <ImageListPage />
+        </Route>
+
         <Route path="/contact">
           <ContactPage />
         </Route>
