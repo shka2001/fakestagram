@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 
 export default function ImageItem({imageItem}) {
     const [newCounter, setNewCounter] = useState(0)
-    let counter = 0;
 
     function handleOnClick() {
-        counter = counter + 1
-        console.log(counter)
+        
+        setNewCounter(newCounter + 1)
     }
 
     return (
@@ -23,9 +22,6 @@ export default function ImageItem({imageItem}) {
            </p>
            <p>
                Likes: {imageItem.likes}
-           </p>
-           <p>
-               Counter: {counter}
            </p>
            <p>
                New Counter: {newCounter}
