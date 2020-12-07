@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function ImageItem({imageItem}) {
-    const [newCounter, setNewCounter] = useState(0)
+    const [likes, setLikes] = useState(imageItem.likes)
     //const stateVariable = use State[0] => [stateVariable, setVariable]
     //const newCounter = stateVariable[0]
     //const setNewCounter = stateVariable[1]
@@ -12,7 +12,7 @@ export default function ImageItem({imageItem}) {
     */
 
     function handleOnClick() {
-        setNewCounter(newCounter + 1)
+        setLikes(likes + 1)
     }
 
     return (
@@ -28,12 +28,8 @@ export default function ImageItem({imageItem}) {
                {imageItem.description}
            </p>
            <p>
-               Likes: {imageItem.likes}
+               Likes: {likes}
            </p>
-           <p>
-               New Counter: {newCounter}
-           </p>
-           
         </div>
     )
 }
