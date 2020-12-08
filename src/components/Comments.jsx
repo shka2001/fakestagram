@@ -1,21 +1,31 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 
 export default function Comments() {
     const inputRef = useRef()
-    const commentList = [
+    const [commentList, setCommentList] = useState(["hej", "hå"])
+    /*const commentList = [
         "hej",
         "tjsna",
         "koolt"
-    ]
+    ]*/
 
     function handleOmClick() {
         //Hämta ut det användaren har skrivit i input fältet
         const value = inputRef.current.value
         //console.log(inputRef.current.value)
         //document.getElementById("commentInput").value
+        
         //Lägg till det i Comment List
-        commentList.push(value)
-        console.log(commentList)
+        /*
+        commentList.push(value)×
+        console.log(commentList)×
+        */
+        setCommentList([...commentList, value])
+        /*
+        上と同じこと
+        const input = inputRef.current 
+        input.value = ""
+        */
     }
 
     return (
