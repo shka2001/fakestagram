@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Comments from './Comments'
 
 export default function ImageItem({imageItem}) {
@@ -15,6 +15,11 @@ export default function ImageItem({imageItem}) {
     function handleOnClick() {
         setLikes(likes + 1)
     }
+
+
+useEffect(()=> {
+    console.log("Likes")
+}, [likes])
 
     return (
         <div className="col-md-6">
